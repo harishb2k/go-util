@@ -35,3 +35,13 @@ jobs:
 
     - name: Test
       run: go test -v .
+
+    - name: Checkout for tag
+      uses: actions/checkout@v2
+
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@1.26.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: true
+        DEFAULT_BUMP: patch
