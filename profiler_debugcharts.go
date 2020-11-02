@@ -16,3 +16,4 @@ func LaunchProfileDebugChart(port int) {
     }()
     log.Printf("ProfileDebugChart - Running at http://localhost:%d/debug/charts/", port)
 }
+
